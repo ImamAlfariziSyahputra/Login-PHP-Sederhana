@@ -6,8 +6,9 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $result = mysqli_query($koneksi, 
-    "SELECT * FROM users WHERE username='$username' AND password='$password'");
+    $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+
+    $result = mysqli_query($db1, $query);
 
     $cek = mysqli_num_rows($result);
 
